@@ -46,6 +46,11 @@ a {
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(14px);
+  transition: box-shadow 180ms ease;
+}
+
+.site-header.is-compact {
+  box-shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
 }
 
 .nav {
@@ -54,6 +59,9 @@ a {
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  transition:
+    min-height 180ms ease,
+    padding 180ms ease;
 }
 
 .brand,
@@ -76,6 +84,9 @@ h3 {
   width: 150px;
   height: 88px;
   overflow: hidden;
+  transition:
+    width 180ms ease,
+    height 180ms ease;
 }
 
 .brand-logo-crop img {
@@ -86,6 +97,10 @@ h3 {
   width: 205px;
   max-height: none;
   height: auto;
+  transition:
+    top 180ms ease,
+    left 180ms ease,
+    width 180ms ease;
 }
 
 .nav-links {
@@ -516,6 +531,9 @@ p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 0.9rem;
+    transition:
+      gap 180ms ease,
+      font-size 180ms ease;
   }
 
   .brand-logo-crop {
@@ -530,6 +548,45 @@ p {
   }
 
   .nav-button {
+    display: none;
+  }
+
+  .site-header.is-compact .nav {
+    min-height: 58px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    padding: 0.35rem 0;
+  }
+
+  .site-header.is-compact .brand {
+    flex: 0 0 auto;
+  }
+
+  .site-header.is-compact .brand-logo-crop {
+    width: 64px;
+    height: 40px;
+  }
+
+  .site-header.is-compact .brand-logo-crop img {
+    top: -23px;
+    left: -18px;
+    width: 96px;
+  }
+
+  .site-header.is-compact .nav-links {
+    order: 0;
+    width: auto;
+    flex: 1 1 auto;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.7rem;
+    overflow-x: auto;
+    font-size: 0.88rem;
+    scrollbar-width: none;
+  }
+
+  .site-header.is-compact .nav-links::-webkit-scrollbar {
     display: none;
   }
 
