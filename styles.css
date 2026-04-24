@@ -552,11 +552,11 @@ p {
   }
 
   .site-header.is-compact .nav {
-    min-height: 58px;
+    min-height: 66px;
     flex-wrap: nowrap;
     justify-content: flex-start;
     gap: 0.7rem;
-    padding: 0.35rem 0;
+    padding: 0.25rem 0;
   }
 
   .site-header.is-compact .brand {
@@ -564,14 +564,14 @@ p {
   }
 
   .site-header.is-compact .brand-logo-crop {
-    width: 64px;
-    height: 40px;
+    width: 78px;
+    height: 56px;
   }
 
   .site-header.is-compact .brand-logo-crop img {
-    top: -23px;
-    left: -18px;
-    width: 96px;
+    top: -28px;
+    left: -24px;
+    width: 116px;
   }
 
   .site-header.is-compact .nav-links {
