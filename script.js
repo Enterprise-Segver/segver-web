@@ -2,19 +2,23 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 const header = document.querySelector(".site-header");
 let isHeaderCompact = false;
+let lastScrollPosition = window.scrollY;
 
 function updateHeaderState() {
   const scrollPosition = window.scrollY;
+  const isScrollingDown = scrollPosition > lastScrollPosition;
 
-  if (!isHeaderCompact && scrollPosition > 120) {
+  if (!isHeaderCompact && isScrollingDown && scrollPosition > 180) {
     isHeaderCompact = true;
     header.classList.add("is-compact");
   }
 
-  if (isHeaderCompact && scrollPosition < 40) {
+  if (isHeaderCompact && scrollPosition < 24) {
     isHeaderCompact = false;
     header.classList.remove("is-compact");
   }
+
+  lastScrollPosition = scrollPosition;
 }
 
 updateHeaderState();
