@@ -852,20 +852,44 @@ p {
 
   .nav {
     min-height: 8.25rem;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 0.9rem 0;
+    position: relative;
+    display: block;
+    padding: 0;
+    transition: min-height 340ms cubic-bezier(0.22, 1, 0.36, 1);
   }
 
   .nav-links {
-    order: 3;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     gap: 0.9rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+    transform: translate3d(0, 5.65rem, 0);
     transition:
+      transform 340ms cubic-bezier(0.22, 1, 0.36, 1),
+      width 340ms cubic-bezier(0.22, 1, 0.36, 1),
       gap 180ms ease,
       font-size 180ms ease;
+    will-change: transform;
+  }
+
+  .nav-links::-webkit-scrollbar {
+    display: none;
+  }
+
+  .brand {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translate3d(calc((100vw - 2rem - 7.75rem) / 2), 0.55rem, 0) scale(1);
+    transform-origin: top left;
+    transition: transform 340ms cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: transform;
   }
 
   .brand-logo-crop {
@@ -886,39 +910,18 @@ p {
 
   .site-header.is-compact .nav {
     min-height: 4.125rem;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    gap: 0.7rem;
-    padding: 0.25rem 0;
   }
 
   .site-header.is-compact .brand {
-    flex: 0 0 auto;
-  }
-
-  .site-header.is-compact .brand-logo-crop {
-    width: 4.875rem;
-    height: 3.5rem;
-  }
-
-  .site-header.is-compact .brand-logo-crop img {
-    transform: translate3d(0.9375rem, 0.875rem, 0) scale(0.675);
+    transform: translate3d(0, 0.32rem, 0) scale(0.64);
   }
 
   .site-header.is-compact .nav-links {
-    order: 0;
-    width: auto;
-    flex: 1 1 auto;
-    flex-wrap: nowrap;
+    width: calc(100% - 5.65rem);
     justify-content: flex-start;
     gap: 0.7rem;
-    overflow-x: auto;
     font-size: 0.88rem;
-    scrollbar-width: none;
-  }
-
-  .site-header.is-compact .nav-links::-webkit-scrollbar {
-    display: none;
+    transform: translate3d(5.65rem, 1.25rem, 0);
   }
 
   .hero-layout {
