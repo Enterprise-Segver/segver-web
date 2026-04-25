@@ -104,6 +104,7 @@ h3 {
   transition:
     width 180ms ease,
     height 180ms ease;
+  will-change: width, height;
 }
 
 .brand-logo-crop img {
@@ -114,10 +115,10 @@ h3 {
   width: 12.8125rem;
   max-height: none;
   height: auto;
+  transform-origin: top left;
   transition:
-    top 180ms ease,
-    left 180ms ease,
-    width 180ms ease;
+    transform 260ms cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: transform;
 }
 
 .nav-links {
@@ -876,6 +877,7 @@ p {
     top: -2.625rem;
     left: -2.4375rem;
     width: 10.75rem;
+    transform: translate3d(0, 0, 0) scale(1);
   }
 
   .nav-button {
@@ -900,9 +902,7 @@ p {
   }
 
   .site-header.is-compact .brand-logo-crop img {
-    top: -1.75rem;
-    left: -1.5rem;
-    width: 7.25rem;
+    transform: translate3d(0.9375rem, 0.875rem, 0) scale(0.675);
   }
 
   .site-header.is-compact .nav-links {
