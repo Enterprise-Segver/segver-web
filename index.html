@@ -30,7 +30,7 @@
 
         <nav class="nav-links" aria-label="Navegacion principal">
           <a href="#nosotros">Nosotros</a>
-          <a href="#siclia">Siclia</a>
+          <a href="#productos">Productos</a>
           <a href="#servicios">Servicios</a>
           <a href="#contacto">Contacto</a>
         </nav>
@@ -40,9 +40,9 @@
     </header>
 
     <main>
-      <section id="inicio" class="hero">
+      <section id="inicio" class="hero reveal-section">
         <div class="container hero-layout">
-          <div class="hero-copy">
+          <div class="hero-copy reveal-item">
             <p class="eyebrow">Software empresarial para operar con claridad</p>
             <h1>Segver</h1>
             <p class="hero-text">
@@ -50,13 +50,19 @@
               para empresas que necesitan ordenar procesos, conectar equipos y
               tomar mejores decisiones.
             </p>
+            <div class="hero-badges" aria-label="Capacidades principales">
+              <span>CRM</span>
+              <span>ERP</span>
+              <span>Automatizacion</span>
+              <span>Reportes</span>
+            </div>
             <div class="actions">
               <a class="button button-primary" href="#contacto">Hablar con Segver</a>
-              <a class="button button-secondary" href="#siclia">Conocer Siclia</a>
+              <a class="button button-secondary" href="#productos">Ver productos</a>
             </div>
           </div>
 
-          <aside class="product-panel" aria-label="Panel de Siclia">
+          <aside class="product-panel reveal-item" aria-label="Panel de Siclia">
             <div class="panel-header">
               <span class="status-dot"></span>
               <strong>Siclia Control Center</strong>
@@ -80,22 +86,27 @@
                 <strong>Datos para direccion</strong>
               </article>
             </div>
+            <div class="panel-flow" aria-label="Flujo de trabajo">
+              <span>Cliente</span>
+              <span>Operacion</span>
+              <span>Decision</span>
+            </div>
           </aside>
         </div>
       </section>
 
-      <section class="trust-strip" aria-label="Atributos de Segver">
+      <section class="trust-strip reveal-section" aria-label="Atributos de Segver">
         <div class="container trust-grid">
-          <span>Empresarial</span>
-          <span>Confiable</span>
-          <span>Amigable</span>
-          <span>Escalable</span>
+          <span class="reveal-item"><strong>Empresarial</strong><small>Procesos claros</small></span>
+          <span class="reveal-item"><strong>Confiable</strong><small>Base estable</small></span>
+          <span class="reveal-item"><strong>Amigable</strong><small>Adopcion real</small></span>
+          <span class="reveal-item"><strong>Escalable</strong><small>Preparado para crecer</small></span>
         </div>
       </section>
 
-      <section id="nosotros" class="section">
+      <section id="nosotros" class="section reveal-section">
         <div class="container two-column">
-          <div class="section-heading">
+          <div class="section-heading reveal-item">
             <p class="section-label">Nosotros</p>
             <h2>Disenamos tecnologia con criterio de negocio.</h2>
             <p>
@@ -106,21 +117,21 @@
           </div>
 
           <div class="principles">
-            <article>
+            <article class="reveal-item">
               <span>01</span>
               <div>
                 <h3>Escuchamos primero</h3>
                 <p>Entendemos el contexto antes de proponer una solucion.</p>
               </div>
             </article>
-            <article>
+            <article class="reveal-item">
               <span>02</span>
               <div>
                 <h3>Ordenamos la experiencia</h3>
                 <p>Creamos interfaces claras para uso diario y adopcion real.</p>
               </div>
             </article>
-            <article>
+            <article class="reveal-item">
               <span>03</span>
               <div>
                 <h3>Construimos para crecer</h3>
@@ -131,67 +142,106 @@
         </div>
       </section>
 
-      <section id="siclia" class="section section-dark">
+      <section id="productos" class="section section-dark reveal-section">
         <div class="container">
-          <div class="section-heading wide">
-            <p class="section-label">Siclia</p>
-            <h2>CRM y ERP integrados en una plataforma clara para tu empresa.</h2>
+          <div class="section-heading wide reveal-item">
+            <p class="section-label">Productos</p>
+            <h2>Siclia integra CRM y ERP en una plataforma clara para tu empresa.</h2>
             <p>
-              Siclia centraliza gestion comercial, operaciones y reportes para
-              reemplazar herramientas dispersas por un sistema unico.
+              Nuestro primer producto centraliza gestion comercial, operaciones
+              y reportes para reemplazar herramientas dispersas por un sistema
+              unico.
             </p>
           </div>
 
+          <article class="product-showcase reveal-item">
+            <div>
+              <p class="showcase-label">Producto activo</p>
+              <h3>Siclia</h3>
+              <p>
+                Una plataforma para ordenar clientes, procesos y datos de gestion
+                en un solo entorno de trabajo.
+              </p>
+            </div>
+            <div class="showcase-mark" aria-hidden="true">
+              <img src="imagenes/favicon.png" alt="" />
+            </div>
+          </article>
+
           <div class="cards-grid">
-            <article class="dark-card">
+            <article class="dark-card reveal-item">
               <span>CRM</span>
               <h3>Relacion con clientes</h3>
               <p>Clientes, oportunidades y actividades comerciales en seguimiento.</p>
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 11a4 4 0 1 1 4-4 4 4 0 0 1-4 4Zm10 2a3 3 0 1 0-3-3" />
+                <path d="M2.5 20a5 5 0 0 1 9 0M13 20a4 4 0 0 1 7.5 0" />
+              </svg>
             </article>
-            <article class="dark-card">
+            <article class="dark-card reveal-item">
               <span>ERP</span>
               <h3>Control operativo</h3>
               <p>Procesos, responsables y trazabilidad en un solo lugar.</p>
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 5h16v5H4zM4 14h7v5H4zM15 14h5v5h-5z" />
+                <path d="M8 10v4M17 10v4" />
+              </svg>
             </article>
-            <article class="dark-card">
+            <article class="dark-card reveal-item">
               <span>BI</span>
               <h3>Lectura directiva</h3>
               <p>Informacion organizada para decisiones con mayor confianza.</p>
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 19V5M4 19h16" />
+                <path d="M8 16v-5M12 16V8M16 16v-7M20 16v-3" />
+              </svg>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="servicios" class="section">
+      <section id="servicios" class="section reveal-section">
         <div class="container">
-          <div class="section-heading wide">
+          <div class="section-heading wide reveal-item">
             <p class="section-label">Servicios</p>
             <h2>Soluciones digitales que ayudan a operar mejor.</h2>
           </div>
 
           <div class="cards-grid">
-            <article class="service-card">
+            <article class="service-card reveal-item">
               <span>01</span>
               <h3>Software a medida</h3>
               <p>Aplicaciones web y plataformas internas adaptadas a tus procesos.</p>
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8 9 5 12l3 3M16 9l3 3-3 3M13 7l-2 10" />
+                <path d="M4 5h16v14H4z" />
+              </svg>
             </article>
-            <article class="service-card">
+            <article class="service-card reveal-item">
               <span>02</span>
               <h3>Automatizacion empresarial</h3>
               <p>Integraciones para reducir tareas manuales y errores operativos.</p>
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 3v3M12 18v3M4.8 7.2l2.1 2.1M17.1 14.7l2.1 2.1M3 12h3M18 12h3M4.8 16.8l2.1-2.1M17.1 9.3l2.1-2.1" />
+                <circle cx="12" cy="12" r="3" />
+              </svg>
             </article>
-            <article class="service-card service-card-accent">
+            <article class="service-card service-card-accent reveal-item">
               <span>03</span>
               <h3>Implementacion guiada</h3>
               <p>Acompanamiento para lograr adopcion real dentro del equipo.</p>
+              <svg class="card-icon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h7M5 6h14M5 18h14" />
+                <path d="m15 10 3 3-3 3" />
+              </svg>
             </article>
           </div>
         </div>
       </section>
 
-      <section id="contacto" class="contact-section">
+      <section id="contacto" class="contact-section reveal-section">
         <div class="container contact-layout">
-          <div>
+          <div class="reveal-item">
             <p class="section-label">Contacto</p>
             <h2>Hablemos de la siguiente etapa digital de tu empresa.</h2>
             <p>
@@ -199,7 +249,7 @@
               ayudarte a convertir procesos dispersos en una operacion ordenada.
             </p>
           </div>
-          <div class="contact-actions">
+          <div class="contact-actions reveal-item">
             <a class="button button-primary" href="mailto:hello@segver.com">Escribir por correo</a>
             <a class="contact-link" href="mailto:hello@segver.com">hello@segver.com</a>
           </div>
