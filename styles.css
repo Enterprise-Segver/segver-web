@@ -62,7 +62,8 @@ a {
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(0.875rem);
-  transition: box-shadow 180ms ease;
+  transition: box-shadow 240ms ease;
+  will-change: box-shadow;
 }
 
 .site-header.is-compact {
@@ -849,7 +850,7 @@ p {
   }
 
   .nav {
-    min-height: auto;
+    min-height: 8.25rem;
     flex-wrap: wrap;
     justify-content: center;
     padding: 0.9rem 0;
