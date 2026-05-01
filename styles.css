@@ -954,6 +954,40 @@ p {
     width: min(var(--container), calc(100% - 1.1rem));
   }
 
+  .nav {
+    min-height: 7.65rem;
+  }
+
+  .nav-links {
+    gap: 0.55rem;
+    justify-content: space-between;
+    font-size: 0.9rem;
+    transform: translate3d(0, 5.25rem, 0);
+  }
+
+  .brand {
+    transform: translate3d(calc((100vw - 1.1rem - 7.25rem) / 2), 0.45rem, 0) scale(1);
+  }
+
+  .brand-logo-crop {
+    width: 7.25rem;
+    height: 4.35rem;
+  }
+
+  .brand-logo-crop img {
+    top: -2.45rem;
+    left: -2.3rem;
+    width: 10.1rem;
+  }
+
+  .hero-layout {
+    padding: 2.8rem 0 3.25rem;
+  }
+
+  h1 {
+    font-size: 3.75rem;
+  }
+
   .section {
     padding: 4rem 0;
   }
@@ -976,6 +1010,18 @@ p {
     display: none;
   }
 
+  .whatsapp-float {
+    right: 0.65rem;
+    bottom: 0.65rem;
+    width: 3.1rem;
+    height: 3.1rem;
+  }
+
+  .whatsapp-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+  }
+
   .principles article {
     gap: 1rem;
   }
@@ -991,5 +1037,11 @@ p {
   .card-icon {
     width: 2.65rem;
     height: 2.65rem;
+  }
+}
+
+@media (max-width: 23.75em) {
+  .whatsapp-float {
+    display: none;
   }
 }
